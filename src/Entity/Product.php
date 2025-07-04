@@ -27,7 +27,7 @@ class Product
     private ?User $owner = null;
 
     #[ORM\Column(length: 255, nullable: true)]
-    private ?string $stripePriceld = null;
+    private ?string $stripePriceId = null;
 
     public function getId(): ?int
     {
@@ -70,15 +70,17 @@ class Product
         return $this;
     }
 
-    public function getStripePriceld(): ?string
+    public function getStripePriceId(): ?string
     {
-        return $this->stripePriceld;
+        return $this->stripePriceId;
     }
 
-    public function setStripePriceld(?string $stripePriceld): static
+    public function setStripePriceId(?string $stripePriceId): static
     {
-        $this->stripePriceld = $stripePriceld;
+        $this->stripePriceId = $stripePriceId;
 
         return $this;
     }
+
+
 }
